@@ -1,21 +1,22 @@
-import React, { ReactElement, ReactNode, ReactFragment } from 'react';
+import React from 'react';
 import './PaletteView.css';
+import { Swatch } from '../Swatch/Swatch';
 
 interface PaletteViewProps {
-  colors?: string[];
-  className: string;
+  className?: string;
+  palette: string[];
 }
 
-const swatches: JSX.Element[] = [];
+export const PaletteView: React.FC<PaletteViewProps> = ({ palette }) => {
+  const swatches: JSX.Element[] = [];
 
-for (let i = 0; i < 12; i++) {
-  swatches.push(<div className={'swatch'} />)
-}
+  for (let i = 0; i < palette.length; i++) {
+    swatches.push(<Swatch color={palette[i]} />)
+  }
 
-export const PaletteView: React.FC<PaletteViewProps> = ({ colors }) => {
   return (
-    <>
+    <div className={'paletteRoot'}>
       {swatches}
-    </> 
+    </div> 
   );
 }

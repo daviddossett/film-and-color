@@ -1,11 +1,5 @@
 .wrapper {
+  height: 100vh;
   display: grid;
-}
-
-.heroImage {
-
-}
-
-.paletteView {
-  
+  grid-template-rows: 75% 25%;
 }

@@ -2,14 +2,11 @@ import React from 'react';
 import './HeroImage.css';
 
 interface HeroImageProps {
-  imageUrl: string;
-  className: string;
+  className?: string;
 }
 
-export const HeroImage: React.FC<HeroImageProps> = ({ imageUrl }) => {
+export const HeroImage: React.FC<HeroImageProps> = () => {
   return (
-      <>
-        <img src={imageUrl} />
-      </>
+      <div className={'heroRoot'} />
   )
 }

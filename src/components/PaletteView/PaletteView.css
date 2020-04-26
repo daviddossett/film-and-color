@@ -1,3 +1,7 @@
-.swatch {
-  background-color: gray;
+.paletteRoot {
+    background-color: #D9D9D9;
+    border: 8px solid #FFFFFF;
+    display: grid;
+    grid-template-columns: repeat(12, auto);
+    grid-column-gap: 8px;
 }
