@@ -11,6 +11,6 @@ export const Swatch: React.FC<SwatchProps> = ({ color }) => {
         backgroundColor: color,
     }
   return (
-    <div style={style} />
+    <div style={style} className={'swatchWrapper'} />
   );
 }

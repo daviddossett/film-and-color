@@ -1,4 +1,4 @@
 .heroRoot {
-    background-image: url('../../images/lost-in-translation.jpg');
+    background: url('../../images/lost-in-translation.jpg') ;
     background-size: cover;
 }
