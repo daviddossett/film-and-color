@@ -4,7 +4,7 @@ import { Swatch } from '../Swatch/Swatch';
 
 interface PaletteViewProps {
   className?: string;
-  palette: string[];
+  palette: any;
 }
 
 export const PaletteView: React.FC<PaletteViewProps> = ({ palette }) => {
