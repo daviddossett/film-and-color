@@ -1,17 +1,17 @@
-import React, { useEffect, useState } from "react";
-import Clarifai from "clarifai";
+import React, { useEffect, useState } from 'react';
+import Clarifai from 'clarifai';
 
-import "./RootPage.css";
-import { HeroImage } from "../HeroImage/HeroImage";
-import { PaletteView } from "../PaletteView/PaletteView";
+import './RootPage.css';
+import { HeroImage } from '../HeroImage/HeroImage';
+import { PaletteView } from '../PaletteView/PaletteView';
 
 interface RootPageProps {}
 
-const selectedImage = "https://wallpapercave.com/wp/wp3535960.jpg";
-const modelId = "eeed0b6733a644cea07cf4c60f87ebb7";
+const selectedImage = 'https://wallpapercave.com/wp/wp3535960.jpg';
+const modelId = 'eeed0b6733a644cea07cf4c60f87ebb7';
 
 const app = new Clarifai.App({
-  apiKey: "50813a3a6f6a447d9d2853ebba96a18b",
+  apiKey: '50813a3a6f6a447d9d2853ebba96a18b',
 });
 
 async function getPalette() {
@@ -39,8 +39,8 @@ export const RootPage: React.FC<RootPageProps> = () => {
   }, []);
 
   return (
-    <div className={"wrapper"}>
-      <HeroImage />
+    <div className={'wrapper'}>
+      <HeroImage image={selectedImage} />
       <PaletteView palette={palette} />
     </div>
   );

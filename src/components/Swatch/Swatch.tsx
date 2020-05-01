@@ -1,5 +1,5 @@
-import React from "react";
-import "./Swatch.css";
+import React from 'react';
+import './Swatch.css';
 
 interface SwatchProps {
   className?: string;
@@ -10,5 +10,5 @@ export const Swatch: React.FC<SwatchProps> = ({ color }) => {
   const style = {
     backgroundColor: color,
   };
-  return <div style={style} className={"swatchWrapper"} />;
+  return <div style={style} className={'swatchWrapper'} />;
 };
