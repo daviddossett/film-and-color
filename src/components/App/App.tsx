@@ -1,7 +1,7 @@
 import React from "react";
 
 import "./App.css";
-import { RootPage } from "./components/RootPage/RootPage";
+import { RootPage } from "../RootPage/RootPage";
 
 function App() {
   return <RootPage />;
