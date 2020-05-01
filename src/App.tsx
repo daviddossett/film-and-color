@@ -1,10 +1,10 @@
-import React from 'react';
+import React from "react";
 
-import './App.css';
-import { RootPage } from './components/RootPage/RootPage';
+import "./App.css";
+import { RootPage } from "./components/RootPage/RootPage";
 
 function App() {
-  return <RootPage />
+  return <RootPage />;
 }
 
 export default App;

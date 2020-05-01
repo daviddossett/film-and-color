@@ -1,7 +1,7 @@
 .paletteRoot {
-    background: #FFFFFF;
-    border: 4px solid #FFFFFF;
-    display: grid;
-    grid-template-columns: repeat(4, auto);
-    grid-column-gap: 4px;
+  background: #ffffff;
+  border: 4px solid #ffffff;
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  grid-column-gap: 4px;
 }

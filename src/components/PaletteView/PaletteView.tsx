@@ -1,6 +1,6 @@
-import React from 'react';
-import './PaletteView.css';
-import { Swatch } from '../Swatch/Swatch';
+import React from "react";
+import "./PaletteView.css";
+import { Swatch } from "../Swatch/Swatch";
 
 interface PaletteViewProps {
   className?: string;
@@ -11,12 +11,8 @@ export const PaletteView: React.FC<PaletteViewProps> = ({ palette }) => {
   const swatches: JSX.Element[] = [];
 
   for (let i = 0; i < palette.length; i++) {
-    swatches.push(<Swatch color={palette[i]} key={i} />)
+    swatches.push(<Swatch color={palette[i]} key={i} />);
   }
 
-  return (
-    <div className={'paletteRoot'}>
-      {swatches}
-    </div> 
-  );
-}
+  return <div className={"paletteRoot"}>{swatches}</div>;
+};
