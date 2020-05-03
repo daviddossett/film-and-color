@@ -7,9 +7,15 @@ interface HeroImageProps {
 }
 
 export const HeroImage: React.FC<HeroImageProps> = ({ image }) => {
+  const style = {
+    backgroundImage: `url(${image})`,
+    backgroundSize: 'contain',
+    backgroundRepeat: 'no-repeat',
+  };
+
   return (
-    <img
-      src={image}
+    <div
+      style={style}
       aria-label={'Still frame from a selected movie'}
       className={'heroRoot'}
     />
