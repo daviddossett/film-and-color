@@ -1,13 +1,13 @@
 import React from 'react';
-import './PaletteView.css';
+import './Palette.css';
 import { Swatch } from '../Swatch/Swatch';
 
-interface PaletteViewProps {
+interface PaletteProps {
   className?: string;
   palette: any;
 }
 
-export const PaletteView: React.FC<PaletteViewProps> = ({ palette }) => {
+export const Palette: React.FC<PaletteProps> = ({ palette }) => {
   const swatches: JSX.Element[] = [];
 
   for (let i = 0; i < palette.length; i++) {

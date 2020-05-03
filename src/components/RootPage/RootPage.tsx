@@ -3,7 +3,7 @@ import Clarifai from 'clarifai';
 
 import './RootPage.css';
 import { HeroImage } from '../HeroImage/HeroImage';
-import { PaletteView } from '../PaletteView/PaletteView';
+import { Palette } from '../Palette/Palette';
 
 interface RootPageProps {}
 
@@ -41,7 +41,7 @@ export const RootPage: React.FC<RootPageProps> = () => {
   return (
     <div className={'wrapper'}>
       <HeroImage image={selectedImage} />
-      <PaletteView palette={palette} />
+      <Palette palette={palette} />
     </div>
   );
 };
