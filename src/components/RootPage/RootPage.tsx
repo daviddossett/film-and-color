@@ -1,5 +1,4 @@
-import React, { useEffect, useState } from 'react';
-import { Switch, Route } from 'react-router-dom';
+import React from 'react';
 
 import './RootPage.css';
 import { Feed } from '../Feed/Feed';
@@ -17,5 +16,5 @@ const imagesWithMetaData: imageWithMetadata[] = [
 ];
 
 export const RootPage: React.FC<RootPageProps> = () => {
-  return <Feed images={imagesWithMetaData} />
+  return <Feed images={imagesWithMetaData} />;
 };
