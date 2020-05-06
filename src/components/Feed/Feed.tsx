@@ -1,12 +1,7 @@
 import React from 'react';
-import { Switch, Route } from 'react-router-dom';
 
 import { Card } from '../Card/Card';
-import { imageWithMetadata } from '../RootPage/RootPage.types';
-
-interface FeedProps {
-  images: imageWithMetadata[];
-}
+import { FeedProps } from './Feed.types';
 
 export const Feed: React.FC<FeedProps> = ({ images }) => {
   let i = 0;

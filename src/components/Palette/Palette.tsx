@@ -1,11 +1,7 @@
 import React from 'react';
 import './Palette.css';
 import { Swatch } from '../Swatch/Swatch';
-
-interface PaletteProps {
-  className?: string;
-  palette: any;
-}
+import { PaletteProps } from './Palette.types';
 
 export const Palette: React.FC<PaletteProps> = ({ palette }) => {
   const swatches: JSX.Element[] = [];

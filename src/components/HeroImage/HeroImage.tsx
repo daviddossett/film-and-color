@@ -1,10 +1,6 @@
 import React from 'react';
 import './HeroImage.css';
-
-interface HeroImageProps {
-  image: string;
-  className?: string;
-}
+import { HeroImageProps } from './HeroImage.types';
 
 export const HeroImage: React.FC<HeroImageProps> = ({ image }) => {
   const style = {
