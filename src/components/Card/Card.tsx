@@ -1,6 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import Clarifai from 'clarifai';
 import { CardProps } from './Card.types';
+import { Palette } from '../Palette/Palette';
+
+import './Card.css';
 
 export const Card: React.FC<CardProps> = ({ title, imageUrl }) => {
   const [palette, setPalette] = useState([]);
@@ -32,6 +35,11 @@ export const Card: React.FC<CardProps> = ({ title, imageUrl }) => {
     });
   }, []);
 
-  // TODO: Add card JSX
-  return <></>;
+  return (
+    <div className={'cardWrapper'}>
+      <h2>{title}</h2>
+      <img src={imageUrl} className={'image'} />
+      <Palette palette={palette} />
+    </div>
+  );
 };

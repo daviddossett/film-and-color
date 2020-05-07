@@ -1,5 +1,21 @@
-.wrapper {
+.rootWrapper {
   height: 100vh;
-  display: grid;
-  grid-template-rows: 75% 25%;
+  width: 100%;
+  color: #323130;
+}
+
+.header {
+  padding: 16px;
+}
+
+.date {
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.2;
+  margin-bottom: 4px;
+  color: #666666;
+}
+
+.title {
+  font-size: 32px;
 }
