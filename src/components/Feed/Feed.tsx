@@ -6,9 +6,9 @@ import { FeedProps } from './Feed.types';
 export const Feed: React.FC<FeedProps> = ({ images }) => {
   let i = 0;
 
-  const cards = images.map((image) => (
+  const cards = images.map(({ title, url }) => (
     <li key={i++}>
-      <Card title={image.title} imageUrl={image.url} />
+      <Card title={title} imageUrl={url} />
     </li>
   ));
 
