@@ -1,8 +1,8 @@
 import React from 'react';
 
 import './RootPage.css';
-import { Feed } from '../Feed/Feed';
 import { imageWithMetadata, RootPageProps } from './RootPage.types';
+import { Feed } from '../Feed/Feed';
 
 const imagesWithMetaData: imageWithMetadata[] = [
   {
@@ -11,14 +11,16 @@ const imagesWithMetaData: imageWithMetadata[] = [
   },
 ];
 
+const currentDate = new Date().toString();
+
 export const RootPage: React.FC<RootPageProps> = () => {
   return (
     <div className={'rootWrapper'}>
       <div className={'header'}>
-        <p className={'date'}>SATURDAY MAY 2</p>
-        <h1 className={'title'}>Film and Color</h1>
+        <p className={'date'}>{currentDate}</p>
+        <h1>Film and Color</h1>
+        <Feed images={imagesWithMetaData} />
       </div>
-      {/* <Feed images={imagesWithMetaData} />; */}
     </div>
   );
 };

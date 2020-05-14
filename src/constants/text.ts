@@ -1,5 +1,3 @@
-import { colors } from './colors';
-
 export const text = {
   header32: {
     fontSize: '32px',
