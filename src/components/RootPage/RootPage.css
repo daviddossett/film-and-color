@@ -1,5 +1,7 @@
 .rootWrapper {
   padding: 24px 16px;
+  display: grid;
+  grid-template-rows: auto;
 }
 
 .header {

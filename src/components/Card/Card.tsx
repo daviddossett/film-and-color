@@ -37,9 +37,7 @@ export const Card: React.FC<CardProps> = ({ title, imageUrl }) => {
 
   return (
     <div className={'cardWrapper'}>
-      <h2>{title}</h2>
-      <img src={imageUrl} className={'image'} />
-      <Palette palette={palette} />
+
     </div>
   );
 };
