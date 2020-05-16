@@ -5,7 +5,9 @@ import { FeedProps } from './Feed.types';
 import './Feed.css';
 
 export const Feed: React.FC<FeedProps> = ({ images }) => {
-  const cards = images.map(image => <Card title={image.title} imageUrl={image.url} />);
+  let i: number = 0;
+
+  const cards = images.map(image => <Card title={image.title} imageUrl={image.url} key={i++} />);
   return (
     <div className={'feedWrapper'}>
       <ul>{cards}</ul>

@@ -1,4 +1,4 @@
 export interface PaletteProps {
-  className?: string;
+  className?: any;
   palette: any;
 }

@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import Clarifai from 'clarifai';
+
 import { CardProps } from './Card.types';
 import { Palette } from '../Palette/Palette';
-
 import './Card.css';
 
 export const Card: React.FC<CardProps> = ({ title, imageUrl }) => {
@@ -35,7 +35,17 @@ export const Card: React.FC<CardProps> = ({ title, imageUrl }) => {
     });
   }, []);
 
+  const style = {
+    backgroundImage: `url(${imageUrl})`,
+    backgroundSize: 'cover',
+    backgroundRepeat: 'no-repeat',
+  };
+
   return (
-    <li className={'cardWrapper'}></li>
+    <li className={'cardWrapper'} style={style}>
+      <div></div>
+      <h2 className={'cardTitle'}>{title}</h2>
+      <div className={'palette'} />
+    </li>
   );
 };
