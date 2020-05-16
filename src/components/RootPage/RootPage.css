@@ -2,6 +2,7 @@
   padding: 24px 16px;
   display: grid;
   grid-template-rows: auto;
+  grid-template-columns: auto;
 }
 
 .header {
@@ -20,4 +21,16 @@
 @keyframes fadeInUp {
   0%   { opacity: 0; }
   100% { opacity: 1;}
+}
+
+@media screen and (min-width: 1024px) {
+  .rootWrapper {
+    padding: 32px 32px;
+  }
+}
+
+@media screen and (min-width: 1366px) {
+  .rootWrapper {
+    padding: 48px 128px;
+  }
 }

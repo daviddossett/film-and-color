@@ -14,6 +14,10 @@ const imagesWithMetaData: imageWithMetadata[] = [
     url: 'https://images4.alphacoders.com/597/thumb-1920-597547.jpg',
     title: 'The Grand Budapest Hotel',
   },
+  {
+    url: 'https://images4.alphacoders.com/597/thumb-1920-597547.jpg',
+    title: 'The Grand Budapest Hotel',
+  },
 ];
 
 
