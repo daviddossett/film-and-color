@@ -36,8 +36,6 @@ export const Card: React.FC<CardProps> = ({ title, imageUrl }) => {
   }, []);
 
   return (
-    <div className={'cardWrapper'}>
-
-    </div>
+    <li className={'cardWrapper'}></li>
   );
 };

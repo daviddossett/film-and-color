@@ -1,3 +1,9 @@
 .feedWrapper {
   padding: 16px 0;
 }
+
+ul {
+  display: grid;
+  grid-template-rows: repeat(auto, minmax(320px, 600px));
+  grid-row-gap: 16px;
+}

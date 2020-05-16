@@ -10,6 +10,10 @@ const imagesWithMetaData: imageWithMetadata[] = [
     url: 'https://images4.alphacoders.com/597/thumb-1920-597547.jpg',
     title: 'The Grand Budapest Hotel',
   },
+  {
+    url: 'https://images4.alphacoders.com/597/thumb-1920-597547.jpg',
+    title: 'The Grand Budapest Hotel',
+  },
 ];
 
 
@@ -19,8 +23,8 @@ export const RootPage: React.FC<RootPageProps> = () => {
       <div className={'header'}>
         <p className={'date'}>{currentDate}</p>
         <h1>Film and Color</h1>
-        <Feed images={imagesWithMetaData} />
       </div>
+        <Feed images={imagesWithMetaData} />
     </div>
   );
 };
