@@ -22,7 +22,6 @@ export const Card: React.FC<CardProps> = ({ title, imageUrl }) => {
     for (let i = 0; i < colors.length; i++) {
       palette.push(colors[i].raw_hex);
     }
-    console.log(palette);
     return palette;
   }
 
@@ -45,7 +44,7 @@ export const Card: React.FC<CardProps> = ({ title, imageUrl }) => {
     <li className={'cardWrapper'} style={style}>
       <div></div>
       <h2 className={'cardTitle'}>{title}</h2>
-      <div className={'palette'} />
+      <div className={'paletteWrapper'}><Palette palette={palette} /></div>
     </li>
   );
 };

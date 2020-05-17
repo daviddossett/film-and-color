@@ -3,19 +3,18 @@
   grid-template-rows: 1fr auto auto;
   width: 100%;
   height: 100%;
-  border-radius: 8px;
+  border-radius: 12px;
+  overflow: hidden;
+  cursor: pointer;
 }
 
 .cardTitle {
-  width: inherit;
   padding: 16px;
   text-overflow: ellipsis;
+  text-shadow: 0px 1px 4px rgba(0, 0, 0, 0.30);
 }
 
 .palette {
   height: 200px;
   width: inherit;
-  background-color: #FFFFFF88;
-  border-bottom-right-radius: 8px;
-  border-bottom-left-radius: 8px;
 }
