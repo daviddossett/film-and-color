@@ -1,19 +1,18 @@
 import React from 'react';
 import './HeroImage.css';
-import { HeroImageProps } from './HeroImage.types';
 
-export const HeroImage: React.FC<HeroImageProps> = ({ image }) => {
-  const style = {
-    backgroundImage: `url(${image})`,
-    backgroundSize: 'contain',
-    backgroundRepeat: 'no-repeat',
-  };
+interface HeroImageProps {
+  image: string;
+  title: string;
+  ariaLabel: string;
+  className?: string;
+}
 
+export const HeroImage: React.FC<HeroImageProps> = ({ image, title, ariaLabel }) => {
   return (
-    <div
-      style={style}
-      aria-label={'Still frame from a selected movie'}
-      className={'heroRoot'}
-    />
+    <div className={'heroRoot'}>
+      <h1>{title}</h1>
+      <img src={image} alt={ariaLabel} />
+    </div>
   );
 };
