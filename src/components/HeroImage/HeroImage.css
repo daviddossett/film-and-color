@@ -1,0 +1,9 @@
+.heroImageRoot {
+  display: flex;
+  padding: 32px;
+}
+
+.title {
+  color: #ffffff;
+  align-self: flex-end;
+}

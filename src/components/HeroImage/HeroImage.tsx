@@ -9,10 +9,13 @@ interface HeroImageProps {
 }
 
 export const HeroImage: React.FC<HeroImageProps> = ({ image, title, ariaLabel }) => {
+  const imageStyles = {
+    backgroundImage: `url(${image})`,
+    backgroundSize: 'cover',
+  };
   return (
-    <div className={'heroRoot'}>
-      <h1>{title}</h1>
-      <img src={image} alt={ariaLabel} />
+    <div className={'heroImageRoot'} style={imageStyles}>
+      <h1 className={'title'}>{title}</h1>
     </div>
   );
 };

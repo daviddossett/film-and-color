@@ -1,6 +1,5 @@
 import React from 'react';
 
-import './App.css';
 import { ImageWithPalette } from '../ImageWithPalette/ImageWithPalette';
 
 const imagesWithMetaData = [
@@ -31,11 +30,7 @@ const title = imagesWithMetaData[0].title;
 const ariaLabel = imagesWithMetaData[0].ariaLabel;
 
 function App() {
-  return (
-    <div className={'rootWrapper'}>
-      <ImageWithPalette image={image} title={title} ariaLabel={ariaLabel} />
-    </div>
-  );
+  return <ImageWithPalette image={image} title={title} ariaLabel={ariaLabel} />;
 }
 
 export default App;

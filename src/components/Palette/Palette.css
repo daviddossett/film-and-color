@@ -3,5 +3,4 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(12px, 1fr));
   width: inherit;
-  height: 160px;
 }
