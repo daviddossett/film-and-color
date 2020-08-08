@@ -9,10 +9,10 @@ interface PaletteProps {
   className?: any;
 }
 
-const modelId = 'eeed0b6733a644cea07cf4c60f87ebb7';
+const modelId = process.env.REACT_APP_CLARIFAI_MODEL_KEY;
 
 const app = new Clarifai.App({
-  apiKey: process.env.REACT_APP_CLARIFAI_KEY,
+  apiKey: process.env.REACT_APP_CLARIFAI_API_KEY,
 });
 
 export const Palette: React.FC<PaletteProps> = ({ image }) => {
