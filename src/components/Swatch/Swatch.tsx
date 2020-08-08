@@ -1,10 +1,18 @@
 import React from 'react';
 import './Swatch.css';
-import { SwatchProps } from './Swatch.types';
 
-export const Swatch: React.FC<SwatchProps> = ({ color }) => {
+export interface SwatchProps {
+  isLoading: boolean;
+  color?: string;
+  className?: string;
+}
+
+export const Swatch: React.FC<SwatchProps> = ({ color, isLoading }) => {
   const style = {
     backgroundColor: color,
   };
+
+  if (isLoading) return <div className={'loadingSwatch'} />;
+
   return <div style={style} className={'swatchWrapper'} />;
 };

@@ -16,6 +16,7 @@ const app = new Clarifai.App({
 });
 
 export const Palette: React.FC<PaletteProps> = ({ image }) => {
+  const [loading, setLoading] = useState(true);
   const [palette, setPalette] = useState([]);
 
   useEffect(() => {
@@ -28,8 +29,22 @@ export const Palette: React.FC<PaletteProps> = ({ image }) => {
     getPalette();
   }, [image]);
 
-  let swatches: JSX.Element[] = palette.map((color) => {
-    return <Swatch color={color} />;
+  useEffect(() => {
+    if (palette.length > 0) {
+      setLoading(false);
+    }
+  }, [setLoading, palette]);
+
+  if (loading) {
+    let shimmers = [];
+    for (let i = 0; i < 8; i++) {
+      shimmers.push(<Swatch key={i} isLoading={loading} />);
+    }
+    return <div className={'paletteRoot'}>{shimmers}</div>;
+  }
+
+  let swatches = palette.map((color) => {
+    return <Swatch key={color} isLoading={loading} color={color} />;
   });
 
   return <div className={'paletteRoot'}>{swatches}</div>;
