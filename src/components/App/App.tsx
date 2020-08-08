@@ -27,7 +27,7 @@ const imagesWithMetaData = [
 
 // Select a random image from the array the image for now
 
-const randomImageNumber = Math.floor(Math.random() * 2);
+const randomImageNumber = Math.floor(Math.random() * 3);
 const image = imagesWithMetaData[randomImageNumber].url;
 const title = imagesWithMetaData[randomImageNumber].title;
 const ariaLabel = imagesWithMetaData[randomImageNumber].ariaLabel;
