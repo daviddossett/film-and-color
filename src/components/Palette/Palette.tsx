@@ -18,25 +18,15 @@ const app = new Clarifai.App({
 export const Palette: React.FC<PaletteProps> = ({ image }) => {
   const [palette, setPalette] = useState([]);
 
-  async function getPalette() {
-    let response = await app.models.predict(modelId, image);
-    let colors = response.outputs[0].data.colors;
-    let palette = [];
-
-    for (let i = 0; i < colors.length; i++) {
-      palette.push(colors[i].raw_hex);
-    }
-    return palette;
-  }
-
   useEffect(() => {
-    function handlePaletteUpdate(somePalette: any) {
-      setPalette(somePalette);
+    async function getPalette() {
+      let response = await app.models.predict(modelId, image);
+      let colors = response.outputs[0].data.colors;
+      let generatedPalette = colors.map((color: any) => color.raw_hex);
+      setPalette(generatedPalette);
     }
-    getPalette().then(function (response) {
-      handlePaletteUpdate(response);
-    });
-  }, []);
+    getPalette();
+  }, [image]);
 
   let swatches: JSX.Element[] = palette.map((color) => {
     return <Swatch color={color} />;
