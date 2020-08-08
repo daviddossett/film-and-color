@@ -8,7 +8,11 @@ interface HeroImageProps {
   className?: string;
 }
 
-export const HeroImage: React.FC<HeroImageProps> = ({ image, title, ariaLabel }) => {
+export const HeroImage: React.FC<HeroImageProps> = ({
+  image,
+  title,
+  ariaLabel,
+}) => {
   const imageStyles = {
     backgroundImage: `url(${image})`,
     backgroundSize: 'cover',

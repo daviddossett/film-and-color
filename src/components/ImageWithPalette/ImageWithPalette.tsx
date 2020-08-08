@@ -10,11 +10,15 @@ interface ImageWithPaletteProps {
   ariaLabel: string;
 }
 
-export const ImageWithPalette: React.FC<ImageWithPaletteProps> = ({ image, title, ariaLabel }) => {
+export const ImageWithPalette: React.FC<ImageWithPaletteProps> = ({
+  image,
+  title,
+  ariaLabel,
+}) => {
   return (
-    <div className={'imageWithPaletteRoot'}>
-      <HeroImage image={image} title={title} ariaLabel={ariaLabel} className={'heroImage'} />
-      <Palette image={image} className={'palette'} />
+    <div className={'root'}>
+      <HeroImage image={image} title={title} ariaLabel={ariaLabel} />
+      <Palette image={image} />
     </div>
   );
 };

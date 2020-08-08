@@ -17,7 +17,8 @@ const imagesWithMetaData = [
     key: 1,
   },
   {
-    url: 'https://anotherimg-dazedgroup.netdna-ssl.com/900/azure/another-prod/390/7/397925.jpg',
+    url:
+      'https://anotherimg-dazedgroup.netdna-ssl.com/900/azure/another-prod/390/7/397925.jpg',
     title: 'Hotel Chevalier',
     ariaLabel: 'A still frame from Hotel Chevalier',
     key: 2,
