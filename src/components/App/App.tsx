@@ -25,10 +25,12 @@ const imagesWithMetaData = [
   },
 ];
 
-// Hardcoded the image for now
-const image = imagesWithMetaData[0].url;
-const title = imagesWithMetaData[0].title;
-const ariaLabel = imagesWithMetaData[0].ariaLabel;
+// Select a random image from the array the image for now
+
+const randomImageNumber = Math.floor(Math.random() * 2);
+const image = imagesWithMetaData[randomImageNumber].url;
+const title = imagesWithMetaData[randomImageNumber].title;
+const ariaLabel = imagesWithMetaData[randomImageNumber].ariaLabel;
 
 function App() {
   return <ImageWithPalette image={image} title={title} ariaLabel={ariaLabel} />;
