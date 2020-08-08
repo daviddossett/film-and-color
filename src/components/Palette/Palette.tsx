@@ -37,7 +37,7 @@ export const Palette: React.FC<PaletteProps> = ({ image }) => {
 
   if (loading) {
     let shimmers = [];
-    for (let i = 0; i < 8; i++) {
+    for (let i = 0; i < 4; i++) {
       shimmers.push(<Swatch key={i} isLoading={loading} />);
     }
     return <div className={'paletteRoot'}>{shimmers}</div>;
