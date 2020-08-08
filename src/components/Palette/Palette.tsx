@@ -11,7 +11,7 @@ interface PaletteProps {
 
 const modelId = process.env.REACT_APP_CLARIFAI_MODEL_KEY;
 
-const app = new Clarifai.App({
+const clarifai = new Clarifai.App({
   apiKey: process.env.REACT_APP_CLARIFAI_API_KEY,
 });
 
@@ -21,7 +21,7 @@ export const Palette: React.FC<PaletteProps> = ({ image }) => {
 
   useEffect(() => {
     async function getPalette() {
-      let response = await app.models.predict(modelId, image);
+      let response = await clarifai.models.predict(modelId, image);
       let colors = response.outputs[0].data.colors;
       let generatedPalette = colors.map((color: any) => color.raw_hex);
       setPalette(generatedPalette);
