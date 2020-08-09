@@ -1,6 +1,7 @@
 import React from 'react';
 
 import { ImageWithPalette } from '../ImageWithPalette/ImageWithPalette';
+import { UploadForm } from '../UploadForm/UploadForm';
 
 const imagesWithMetaData = [
   {
@@ -33,7 +34,12 @@ const title = imagesWithMetaData[randomImageNumber].title;
 const ariaLabel = imagesWithMetaData[randomImageNumber].ariaLabel;
 
 function App() {
-  return <ImageWithPalette image={image} title={title} ariaLabel={ariaLabel} />;
+  return (
+    <>
+      <ImageWithPalette image={image} title={title} ariaLabel={ariaLabel} />
+      <UploadForm />
+    </>
+  );
 }
 
 export default App;
