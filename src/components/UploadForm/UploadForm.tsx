@@ -23,8 +23,6 @@ export const UploadForm: React.FC<UploadFormProps> = () => {
     }
   }
 
-  console.log(file);
-
   return (
     <form>
       <input type={'file'} onChange={handleChange} />
