@@ -9,7 +9,8 @@ interface HeroImageProps {
 export const HeroImage: React.FC<HeroImageProps> = ({ image }) => {
   const imageStyles = {
     backgroundImage: `url(${image})`,
-    backgroundSize: 'cover',
+    backgroundSize: 'contain',
+    backgroundRepeat: 'no-repeat',
   };
   return <div className={'heroImageRoot'} style={imageStyles} />;
 };

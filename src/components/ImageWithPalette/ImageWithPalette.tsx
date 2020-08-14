@@ -9,12 +9,11 @@ interface ImageWithPaletteProps {
   className?: string;
 }
 
-export const ImageWithPalette: React.FC<ImageWithPaletteProps> = () => {
+export const ImageWithPalette: React.FC<ImageWithPaletteProps> = ({ className }) => {
   const { documents } = useFirestore('images');
-  console.log(documents);
 
   return (
-    <div className={'root'}>
+    <div className={`${className} imageWithPaletteRoot`}>
       {documents.length > 0 && (
         <>
           <HeroImage image={documents[0].url} />
