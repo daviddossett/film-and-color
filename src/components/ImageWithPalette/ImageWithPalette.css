@@ -1,7 +1,0 @@
-.imageWithPaletteRoot {
-  height: 100%;
-  width: 100%;
-  background-color: #ffffff;
-  display: grid;
-  grid-template-rows: 1fr 20%;
-}

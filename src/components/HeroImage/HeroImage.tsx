@@ -1,4 +1,5 @@
 import React from 'react';
+
 import './HeroImage.css';
 
 interface HeroImageProps {
@@ -8,9 +9,15 @@ interface HeroImageProps {
 
 export const HeroImage: React.FC<HeroImageProps> = ({ image }) => {
   const imageStyles = {
-    backgroundImage: `url(${image})`,
     backgroundSize: 'contain',
     backgroundRepeat: 'no-repeat',
   };
-  return <div className={'heroImageRoot'} style={imageStyles} />;
+  return (
+    <img
+      src={image}
+      className={'heroImageRoot'}
+      style={imageStyles}
+      alt={'Movie still to be analyzed'}
+    />
+  );
 };

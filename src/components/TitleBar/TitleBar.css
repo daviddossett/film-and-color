@@ -1,6 +1,16 @@
 .titleRoot {
-  height: 52px;
-  width: 100%;
-  background-color: #ffffff;
-  border-bottom: 1px solid #d9d9d9;
+  padding: 24px 0 16px 0;
+}
+
+.date {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.2px;
+  color: #666666;
+}
+
+@media screen and (min-width: 1024px) {
+  .titleRoot {
+    padding: 32px 0;
+  }
 }
