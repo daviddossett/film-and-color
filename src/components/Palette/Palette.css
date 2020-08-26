@@ -2,5 +2,6 @@
   box-sizing: border-box;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(12px, 1fr));
-  width: inherit;
+  height: 24px;
+  width: 120px;
 }

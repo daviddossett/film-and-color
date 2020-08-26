@@ -1,0 +1,12 @@
+.iconWithPaletteRoot {
+  display: flex;
+  align-items: center;
+}
+
+.icon {
+  margin-right: 24px;
+}
+
+.palette {
+  height: 32px;
+}

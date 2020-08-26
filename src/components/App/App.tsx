@@ -9,9 +9,11 @@ import { ImageDetailsWithPalette } from '../ImageDetailsWithPalette/ImagedDetail
 
 function App() {
   firebase.analytics().logEvent('app_start');
-  const { documents } = useFirestore('images');
 
+  const { documents } = useFirestore('images');
   const [image, setImage] = useState('');
+  const [movieTitle, setMovieTitle] = useState('The Grand Budapest Hotel');
+  const [movieDirector, setMovieDirector] = useState('Wes Anderson');
 
   useEffect(() => {
     if (documents.length > 0) {
@@ -19,14 +21,16 @@ function App() {
     }
   }, [documents, setImage]);
 
-  console.log(image);
-
   return (
     <div className={'appRoot'}>
       <div>
         <TitleBar />
         <HeroImage imageUrl={image} />
-        <ImageDetailsWithPalette imageUrl={image} />
+        <ImageDetailsWithPalette
+          imageUrl={image}
+          movieTitle={movieTitle}
+          movieDirector={movieDirector}
+        />
       </div>
     </div>
   );
