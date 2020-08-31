@@ -3,17 +3,15 @@ import * as firebase from 'firebase';
 
 import './App.css';
 import { TitleBar } from '../TitleBar/TitleBar';
-import { HeroImage } from '../HeroImage/HeroImage';
 import { useFirestore } from '../../hooks/useFirestore';
-import { ImageDetailsWithPalette } from '../ImageDetailsWithPalette/ImagedDetailsWithPalette';
+import { Footer } from '../Footer/Footer';
+import { ImageWithPalette } from '../ImageWithPalette/ImageWithPalette';
 
 function App() {
   firebase.analytics().logEvent('app_start');
 
   const { documents } = useFirestore('images');
   const [image, setImage] = useState('');
-  const [movieTitle, setMovieTitle] = useState('The Grand Budapest Hotel');
-  const [movieDirector, setMovieDirector] = useState('Wes Anderson');
 
   useEffect(() => {
     if (documents.length > 0) {
@@ -23,15 +21,9 @@ function App() {
 
   return (
     <div className={'appRoot'}>
-      <div>
-        <TitleBar />
-        <HeroImage imageUrl={image} />
-        <ImageDetailsWithPalette
-          imageUrl={image}
-          movieTitle={movieTitle}
-          movieDirector={movieDirector}
-        />
-      </div>
+      <TitleBar />
+      <ImageWithPalette image={image} />
+      <Footer />
     </div>
   );
 }

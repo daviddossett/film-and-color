@@ -1,11 +1,10 @@
 .swatchWrapper {
-  border: px solid #ffffff;
   overflow: hidden;
   animation: fadeIn 0.2s;
 }
 
 .loadingSwatch {
-  border: 2px solid #ffffff;
+  border: 4px solid #ffffff;
   background-color: #d9d9d9;
   overflow: hidden;
   animation: fadeIn 0.2s;
