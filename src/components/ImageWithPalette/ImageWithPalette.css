@@ -1,5 +1,4 @@
 .imageWithPalette {
   display: grid;
-  grid-auto-rows: 1fr minmax(120px, 320px);
-  grid-row-gap: 4px;
+  grid-auto-rows: 96px 1fr;
 }

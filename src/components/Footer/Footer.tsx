@@ -2,9 +2,13 @@ import React from 'react';
 
 import './Footer.css';
 
-export const Footer: React.FC = () => {
+interface FooterProps {
+  className?: string;
+}
+
+export const Footer: React.FC<FooterProps> = ({ className }) => {
   return (
-    <div className={'footer'}>
+    <div className={`${className} footer`}>
       <p>
         Inspired by&nbsp;
         <a

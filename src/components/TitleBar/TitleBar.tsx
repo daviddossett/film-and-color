@@ -8,9 +8,9 @@ interface TitleBarProps {
 
 export const TitleBar: React.FC<TitleBarProps> = ({ className }) => {
   return (
-    <div className={`${className} titleRoot`}>
-      <span className={'date'}>AUG 31 2020</span>
-      <h1>Film and Color</h1>
+    <div className={className}>
+      <span className={'date'}>September 12 2020</span>
+      <h1 className={'title'}>The Grand Budapest Hotel</h1>
     </div>
   );
 };

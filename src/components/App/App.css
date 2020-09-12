@@ -1,13 +1,62 @@
-.appRoot {
+.grid-container {
   display: grid;
-  grid-auto-rows: auto;
-  grid-auto-columns: minmax(300px, 1024px);
-  padding: 0 16px;
   justify-content: center;
 }
 
-@media screen and (min-width: 1920px) {
-  .appRoot {
-    grid-auto-columns: minmax(300px, 1366px);
-  }
+.grid {
+  max-width: 1200px;
+  padding: 0 64px;
+  display: grid;
+  grid-column-gap: 32px;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: 96px auto 128px auto 24px auto 128px auto 96px;
+  grid-template-areas:
+    '. . . . .'
+    '. header header header header'
+    '. . . . .'
+    'info1 info2 info3 info4 info5'
+    '. . . . .'
+    ' image image image image image'
+    '. . . . .'
+    '. . . footer1 footer2';
+}
+
+.titlebar {
+  grid-area: header;
+}
+
+.info-1 {
+  grid-area: info1;
+}
+
+.info-2 {
+  grid-area: info2;
+}
+
+.info-3 {
+  grid-area: info3;
+}
+
+.info-4 {
+  grid-area: info4;
+}
+
+.info-5 {
+  grid-area: info5;
+}
+
+.footer-1 {
+  grid-area: footer1;
+}
+
+.footer-2 {
+  grid-area: footer2;
+}
+
+.image-with-palette {
+  grid-area: image;
+}
+
+.footer {
+  grid-area: footer;
 }

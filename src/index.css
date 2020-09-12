@@ -4,16 +4,16 @@ html {
 }
 
 body {
-  margin: 0;
-  padding: 0;
-  background-color: #f2f2f2;
+  background-color: var(--background-color);
+  color: var(--text-color-primary);
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto',
     'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   height: inherit;
-  color: #323130;
+  margin: 0;
+  padding: 0;
 }
 
 h1,
@@ -58,12 +58,17 @@ h4 {
 p,
 ul,
 span {
-  font-weight: 400;
-  font-size: 14px;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1.5em;
 }
 
 li {
   list-style-type: none;
+}
+
+a {
+  color: var(--text-color-primary);
 }
 
 #root {
@@ -71,8 +76,8 @@ li {
   width: 100%;
 }
 
-@media screen and (min-width: 1024px) {
-  h1 {
-    font-size: 32px;
-  }
+:root {
+  --background-color: #252525;
+  --text-color-primary: #ffffff;
+  --title-font-size-large: 48px;
 }
