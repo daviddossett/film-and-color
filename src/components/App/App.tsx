@@ -12,6 +12,10 @@ function App() {
 
   const { documents } = useFirestore('images');
   const [image, setImage] = useState('');
+  const [title, setTitle] = useState('Her');
+  const [director, setDirector] = useState('');
+  const [cinematographer, setCinematographer] = useState('');
+  const [artDirector, setArtDirector] = useState('');
 
   useEffect(() => {
     if (documents.length > 0) {
@@ -21,10 +25,9 @@ function App() {
 
   const movieInfo = (
     <>
-      <p className={'info-1'}>Directed by Wes Anderson</p>
+      <p className={'info-1'}>Directed by {director}</p>
       <p className={'info-2'}>
-        Cinematograpy by Robert D. Yeoman. Art direction by Stephan O. Gessler
-        and Gerald Sullivan.
+        Cinematograpy by {cinematographer}. Art direction by {artDirector}
       </p>
     </>
   );
@@ -33,11 +36,21 @@ function App() {
     <>
       <p className={'footer'}>
         Inspired by&nbsp;
-        <a href={'https://www.instagram.com/filmandcolor/?hl=en'}>
+        <a
+          href={'https://www.instagram.com/filmandcolor/?hl=en'}
+          target='_blank'
+          rel='noopener noreferrer'
+        >
           Film and Color
         </a>
         .&nbsp;Made by&nbsp;
-        <a href={'https://twitter.com/david_dossett'}>me</a>
+        <a
+          href={'https://twitter.com/david_dossett'}
+          target='_blank'
+          rel='noopener noreferrer'
+        >
+          me
+        </a>
       </p>
     </>
   );
@@ -45,7 +58,7 @@ function App() {
   return (
     <div className={'grid-container'}>
       <div className={'grid'}>
-        <TitleBar className={'titlebar'} />
+        <TitleBar className={'titlebar'} title={title} />
         <Palette className={'palette'} image={image} />
         {movieInfo}
         <HeroImage className={'image'} imageUrl={image} />
