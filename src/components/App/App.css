@@ -4,21 +4,18 @@
 }
 
 .grid {
-  max-width: 1200px;
-  padding: 0 64px;
+  padding: 16px 16px 64px 16px;
   display: grid;
-  grid-column-gap: 32px;
-  grid-template-columns: repeat(5, 1fr);
-  grid-template-rows: 96px auto 128px auto 24px auto 128px auto 96px;
+  grid-gap: 24px;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: auto;
   grid-template-areas:
-    '. . . . .'
-    '. header header header header'
-    '. . . . .'
-    'info1 info2 info3 info4 info5'
-    '. . . . .'
-    ' image image image image image'
-    '. . . . .'
-    '. . . footer1 footer2';
+    'header header'
+    'image image'
+    'info1 info2'
+    'info3 info4'
+    'info5 .'
+    'footer1 footer2';
 }
 
 .titlebar {
@@ -59,4 +56,25 @@
 
 .footer {
   grid-area: footer;
+}
+
+@media screen and (min-width: 1024px) {
+  .grid {
+    max-width: 1200px;
+    padding: 0 32px;
+    display: grid;
+    grid-column-gap: 32px;
+    grid-row-gap: 0;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: 96px auto 128px auto 24px auto 128px auto 96px;
+    grid-template-areas:
+      '. . . . .'
+      '. header header header header'
+      '. . . . .'
+      'info1 info2 info3 info4 info5'
+      '. . . . .'
+      ' image image image image image'
+      '. . . . .'
+      '. . . footer1 footer2';
+  }
 }
