@@ -15,7 +15,7 @@ const clarifai = new Clarifai.App({
   apiKey: process.env.REACT_APP_CLARIFAI_API_KEY,
 });
 
-export const Palette: React.FC<PaletteProps> = ({ image }) => {
+export const Palette: React.FC<PaletteProps> = ({ image, className }) => {
   const [loading, setLoading] = useState(true);
   const [palette, setPalette] = useState([]);
 
@@ -41,12 +41,12 @@ export const Palette: React.FC<PaletteProps> = ({ image }) => {
     for (let i = 0; i < numberOfShimmers; i++) {
       shimmers.push(<Swatch key={i} isLoading={loading} />);
     }
-    return <div className={'paletteRoot'}>{shimmers}</div>;
+    return <div className={`${className} palette-root`}>{shimmers}</div>;
   }
 
   let swatches = palette.map((color) => {
     return <Swatch key={color} isLoading={loading} color={color} />;
   });
 
-  return <div className={'paletteRoot'}>{swatches}</div>;
+  return <div className={`${className} palette-root`}>{swatches}</div>;
 };

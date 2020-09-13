@@ -15,12 +15,16 @@
     'info1 info2'
     'info3 info4'
     'info5 .'
-    'footer1 footer2';
+    'footer footer';
 }
 
 .titlebar {
   display: grid;
   grid-area: header;
+}
+
+.palette {
+  grid-area: palette;
 }
 
 .info-1 {
@@ -31,27 +35,7 @@
   grid-area: info2;
 }
 
-.info-3 {
-  grid-area: info3;
-}
-
-.info-4 {
-  grid-area: info4;
-}
-
-.info-5 {
-  grid-area: info5;
-}
-
-.footer-1 {
-  grid-area: footer1;
-}
-
-.footer-2 {
-  grid-area: footer2;
-}
-
-.image-with-palette {
+.image {
   grid-area: image;
 }
 
@@ -61,21 +45,24 @@
 
 @media screen and (min-width: 1024px) {
   .grid {
-    max-width: 1200px;
-    padding: 0 32px;
+    max-width: 1440px;
+    padding: 0 64px;
     display: grid;
-    grid-column-gap: 32px;
+    grid-column-gap: 96px;
     grid-row-gap: 0;
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: 96px auto 128px auto 24px auto 128px auto 96px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 96px auto 32px 32px 128px auto 24px auto 96px auto 96px;
     grid-template-areas:
-      '. . . . .'
-      '. header header . .'
-      '. . . . .'
-      'info1 info2 info3 info4 info5'
-      '. . . . .'
-      ' image image image image image'
-      '. . . . .'
-      '. . . footer1 footer2';
+      '. . . .'
+      '. header header header '
+      '. . . . '
+      '. palette palette .'
+      '. . . .'
+      'info1 info2 info2 info2'
+      '. . . . '
+      'image image image image'
+      '. . . . '
+      '. footer footer footer '
+      '. . . .';
   }
 }

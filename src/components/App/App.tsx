@@ -4,7 +4,8 @@ import * as firebase from 'firebase';
 import './App.css';
 import { TitleBar } from '../TitleBar/TitleBar';
 import { useFirestore } from '../../hooks/useFirestore';
-import { ImageWithPalette } from '../ImageWithPalette/ImageWithPalette';
+import { Palette } from '../Palette/Palette';
+import { HeroImage } from '../HeroImage/HeroImage';
 
 function App() {
   firebase.analytics().logEvent('app_start');
@@ -21,23 +22,21 @@ function App() {
   const movieInfo = (
     <>
       <p className={'info-1'}>Directed by Wes Anderson</p>
-      <p className={'info-2'}>Cinematograpy by Robert D. Yeoman</p>
-      <p className={'info-3'}>Art direction by Stephan O. Gessler</p>
-      <p className={'info-4'}>Set decoration by Anna Pinnock</p>
-      <p className={'info-5'}>Shot on 35mm film with Zeiss lenses</p>
+      <p className={'info-2'}>
+        Cinematograpy by Robert D. Yeoman. Art direction by Stephan O. Gessler
+        and Gerald Sullivan.
+      </p>
     </>
   );
 
   const footerInfo = (
     <>
-      <p className={'footer-1'}>
+      <p className={'footer'}>
         Inspired by&nbsp;
         <a href={'https://www.instagram.com/filmandcolor/?hl=en'}>
           Film and Color
         </a>
-      </p>
-      <p className={'footer-2'}>
-        Made by&nbsp;
+        .&nbsp;Made by&nbsp;
         <a href={'https://twitter.com/david_dossett'}>me</a>
       </p>
     </>
@@ -47,8 +46,9 @@ function App() {
     <div className={'grid-container'}>
       <div className={'grid'}>
         <TitleBar className={'titlebar'} />
+        <Palette className={'palette'} image={image} />
         {movieInfo}
-        <ImageWithPalette image={image} className={'image-with-palette'} />
+        <HeroImage className={'image'} imageUrl={image} />
         {footerInfo}
       </div>
     </div>

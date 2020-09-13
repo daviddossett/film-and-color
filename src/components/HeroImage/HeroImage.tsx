@@ -7,7 +7,10 @@ interface HeroImageProps {
   className?: string;
 }
 
-export const HeroImage: React.FC<HeroImageProps> = ({ imageUrl }) => {
+export const HeroImage: React.FC<HeroImageProps> = ({
+  imageUrl,
+  className,
+}) => {
   const imageStyles = {
     backgroundSize: 'contain',
     backgroundRepeat: 'no-repeat',
@@ -15,7 +18,7 @@ export const HeroImage: React.FC<HeroImageProps> = ({ imageUrl }) => {
   return (
     <img
       src={imageUrl}
-      className={'heroImageRoot'}
+      className={`${className} heroImageRoot`}
       style={imageStyles}
       alt={'Movie still to be analyzed'}
     />
