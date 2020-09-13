@@ -14,7 +14,7 @@ export const ImageWithPalette: React.FC<ImageWithPaletteProps> = ({
   className,
 }) => {
   return (
-    <div className={`${className} imageWithPalette`}>
+    <div className={`${className} image-with-palette`}>
       <Palette image={image} />
       <HeroImage imageUrl={image} />
     </div>

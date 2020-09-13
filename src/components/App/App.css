@@ -19,6 +19,7 @@
 }
 
 .titlebar {
+  display: grid;
   grid-area: header;
 }
 
@@ -69,7 +70,7 @@
     grid-template-rows: 96px auto 128px auto 24px auto 128px auto 96px;
     grid-template-areas:
       '. . . . .'
-      '. header header header header'
+      '. header header . .'
       '. . . . .'
       'info1 info2 info3 info4 info5'
       '. . . . .'
