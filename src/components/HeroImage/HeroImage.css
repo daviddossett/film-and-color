@@ -1,6 +1,5 @@
 .heroImageRoot {
   width: 100%;
   overflow: hidden;
-  border-bottom-left-radius: 2px;
-  border-bottom-right-radius: 2px;
+  border-radius: 2px;
 }

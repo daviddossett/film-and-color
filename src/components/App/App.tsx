@@ -12,13 +12,14 @@ function App() {
 
   const { documents } = useFirestore('images');
   const [image, setImage] = useState('');
-  const [title, setTitle] = useState('Her');
-  const [director, setDirector] = useState('');
-  const [cinematographer, setCinematographer] = useState('');
-  const [artDirector, setArtDirector] = useState('');
+  const [title, setTitle] = useState('The Grand Budapest Hotel');
+  const [director, setDirector] = useState('Wes Anderson');
+  const [cinematographer, setCinematographer] = useState('Wes Anderson');
+  const [artDirector, setArtDirector] = useState('Wes Anderson');
 
   useEffect(() => {
     if (documents.length > 0) {
+      console.log(documents);
       setImage(documents[0].url);
     }
   }, [documents, setImage]);
