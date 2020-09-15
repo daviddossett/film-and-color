@@ -14,8 +14,10 @@ function App() {
   const [image, setImage] = useState('');
   const [title, setTitle] = useState('The Grand Budapest Hotel');
   const [director, setDirector] = useState('Wes Anderson');
-  const [cinematographer, setCinematographer] = useState('Wes Anderson');
-  const [artDirector, setArtDirector] = useState('Wes Anderson');
+  const [cinematographer, setCinematographer] = useState('Robert D. Yeoman');
+  const [artDirector, setArtDirector] = useState(
+    'Stephan O. Gessler and Gerald Sullivan'
+  );
 
   useEffect(() => {
     if (documents.length > 0) {
