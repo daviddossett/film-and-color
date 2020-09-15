@@ -19,7 +19,6 @@ function App() {
 
   useEffect(() => {
     if (documents.length > 0) {
-      console.log(documents);
       setImage(documents[0].url);
     }
   }, [documents, setImage]);
@@ -39,16 +38,16 @@ function App() {
         Inspired by&nbsp;
         <a
           href={'https://www.instagram.com/filmandcolor/?hl=en'}
-          target='_blank'
-          rel='noopener noreferrer'
+          target="_blank"
+          rel="noopener noreferrer"
         >
           Film and Color
         </a>
         .&nbsp;Made by&nbsp;
         <a
           href={'https://twitter.com/david_dossett'}
-          target='_blank'
-          rel='noopener noreferrer'
+          target="_blank"
+          rel="noopener noreferrer"
         >
           me
         </a>
