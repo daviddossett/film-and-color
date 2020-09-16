@@ -13,12 +13,6 @@ function App() {
 
   const { documents } = useFirestore('images');
   const [image, setImage] = useState('');
-  const [title, setTitle] = useState('Film and Color');
-  const [director, setDirector] = useState('Wes Anderson');
-  const [cinematographer, setCinematographer] = useState('Robert D. Yeoman');
-  const [artDirector, setArtDirector] = useState(
-    'Stephan O. Gessler and Gerald Sullivan'
-  );
 
   useEffect(() => {
     if (documents.length > 0) {
@@ -26,19 +20,10 @@ function App() {
     }
   }, [documents, setImage]);
 
-  const movieInfo = (
-    <>
-      <p className={'info-1'}>Directed by {director}</p>
-      <p className={'info-2'}>
-        Cinematograpy by {cinematographer}. Art direction by {artDirector}
-      </p>
-    </>
-  );
-
   return (
     <div className={'grid-container'}>
       <div className={'grid'}>
-        <TitleBar className={'titlebar'} title={title} />
+        <TitleBar className={'titlebar'} title={'Film and Color'} />
         <Palette className={'palette'} image={image} />
         <HeroImage className={'image'} imageUrl={image} />
         <Footer className={'footer'} />
