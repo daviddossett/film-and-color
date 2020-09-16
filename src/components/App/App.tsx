@@ -12,7 +12,7 @@ function App() {
 
   const { documents } = useFirestore('images');
   const [image, setImage] = useState('');
-  const [title, setTitle] = useState('The Grand Budapest Hotel');
+  const [title, setTitle] = useState('Film and Color');
   const [director, setDirector] = useState('Wes Anderson');
   const [cinematographer, setCinematographer] = useState('Robert D. Yeoman');
   const [artDirector, setArtDirector] = useState(
@@ -62,9 +62,7 @@ function App() {
       <div className={'grid'}>
         <TitleBar className={'titlebar'} title={title} />
         <Palette className={'palette'} image={image} />
-        {movieInfo}
         <HeroImage className={'image'} imageUrl={image} />
-        {footerInfo}
       </div>
     </div>
   );

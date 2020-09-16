@@ -1,8 +1,8 @@
 .palette-root {
-  box-sizing: border-box;
   margin: 0;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(12px, 1fr));
   overflow: hidden;
-  border-radius: 2px;
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
 }

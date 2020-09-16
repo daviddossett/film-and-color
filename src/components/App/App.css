@@ -4,18 +4,17 @@
 }
 
 .grid {
-  padding: 16px 16px 64px 16px;
+  max-width: 1280px;
+  padding: 128px 64px;
   display: grid;
-  grid-gap: 24px;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: auto;
+  grid-row-gap: 0;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: auto 128px 64px auto;
   grid-template-areas:
-    'header header'
-    'image image'
-    'info1 info2'
-    'info3 info4'
-    'info5 .'
-    'footer footer';
+    'header header header header header header'
+    '. . . . . .'
+    'palette palette palette palette palette palette'
+    'image image image image image image';
 }
 
 .titlebar {
@@ -41,28 +40,4 @@
 
 .footer {
   grid-area: footer;
-}
-
-@media screen and (min-width: 1024px) {
-  .grid {
-    max-width: 1440px;
-    padding: 0 64px;
-    display: grid;
-    grid-column-gap: 96px;
-    grid-row-gap: 0;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: 96px auto 32px 32px 128px auto 24px auto 96px auto 96px;
-    grid-template-areas:
-      '. . . .'
-      '. header header header '
-      '. . . . '
-      '. palette palette .'
-      '. . . .'
-      'info1 info2 info2 info2'
-      '. . . . '
-      'image image image image'
-      '. . . . '
-      '. footer footer footer '
-      '. . . .';
-  }
 }
