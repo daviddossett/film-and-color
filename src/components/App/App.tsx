@@ -23,7 +23,7 @@ function App() {
   return (
     <div className={'grid-container'}>
       <div className={'grid'}>
-        <TitleBar className={'titlebar'} title={'Film and Color'} />
+        <TitleBar className={'titlebar'} />
         <Palette className={'palette'} image={image} />
         <HeroImage className={'image'} imageUrl={image} />
         <Footer className={'footer'} />
