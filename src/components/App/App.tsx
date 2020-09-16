@@ -6,6 +6,7 @@ import { TitleBar } from '../TitleBar/TitleBar';
 import { useFirestore } from '../../hooks/useFirestore';
 import { Palette } from '../Palette/Palette';
 import { HeroImage } from '../HeroImage/HeroImage';
+import { Footer } from '../Footer/Footer';
 
 function App() {
   firebase.analytics().logEvent('app_start');
@@ -34,35 +35,13 @@ function App() {
     </>
   );
 
-  const footerInfo = (
-    <>
-      <p className={'footer'}>
-        Inspired by&nbsp;
-        <a
-          href={'https://www.instagram.com/filmandcolor/?hl=en'}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Film and Color
-        </a>
-        .&nbsp;Made by&nbsp;
-        <a
-          href={'https://twitter.com/david_dossett'}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          me
-        </a>
-      </p>
-    </>
-  );
-
   return (
     <div className={'grid-container'}>
       <div className={'grid'}>
         <TitleBar className={'titlebar'} title={title} />
         <Palette className={'palette'} image={image} />
         <HeroImage className={'image'} imageUrl={image} />
+        <Footer className={'footer'} />
       </div>
     </div>
   );
