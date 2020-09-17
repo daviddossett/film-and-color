@@ -1,13 +1,10 @@
 p {
-  padding: 12px 0;
+  padding: 0;
+  margin-bottom: 8px;
   font-size: 16px;
   color: #a5a5a5;
 }
 
 a {
   color: #a5a5a5;
-}
-
-.footer {
-  text-align: center;
 }

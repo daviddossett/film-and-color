@@ -34,17 +34,19 @@ h3,
 h4,
 h5,
 h6 {
-  font-weight: 700;
+  font-weight: 600;
   line-height: 1.5em;
+  margin-bottom: 16px;
 }
 
 h1 {
-  font-size: 20px;
+  font-size: 32px;
   line-height: 1.5em;
 }
 
 h2 {
-  font-size: 16px;
+  font-size: 24px;
+  font-weight: 500;
 }
 
 h3 {
@@ -77,7 +79,7 @@ a {
 }
 
 :root {
-  --background-color: #1e1e1e;
+  --background-color: #2e2e2e;
   --text-color-primary: #ffffff;
   --title-font-size-large: 48px;
 }
