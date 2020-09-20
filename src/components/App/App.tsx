@@ -33,7 +33,6 @@ function App() {
         <Palette className={'palette'} image={image} />
         <HeroImage className={'image'} imageUrl={image} />
         <Footer className={'footer'} />
-        <Footer className={'footer2'} />
       </div>
     </div>
   );
