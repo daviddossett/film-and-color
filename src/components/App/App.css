@@ -1,79 +1,21 @@
-.grid-container {
-  display: grid;
-  justify-content: center;
-}
-
 .grid {
-  display: grid;
-  padding: 16px;
-  grid-template-columns: 1fr;
-  grid-template-rows: auto 32px 96px auto 96px auto;
-  grid-template-areas:
-    'header'
-    '.'
-    'palette'
-    'image'
-    '.'
-    'footer';
-}
-
-.header {
-  grid-area: header;
-  font-size: 32px;
-}
-
-.info {
-  grid-area: info;
-  margin: 0;
-  padding: 0;
-}
-
-.info p {
-  padding: 0;
-  margin-bottom: 8px;
-}
-
-.palette {
-  grid-area: palette;
-}
-
-.info-1 {
-  grid-area: info1;
-}
-
-.info-2 {
-  grid-area: info2;
+	display: grid;
+	grid-template-columns: repeat(3, auto);
+	grid-column-gap: 32px;
+	padding-top: 32px;
+	padding-bottom: 128px;
+	margin: 0 auto;
+	max-width: 840px;
 }
 
 .image {
-  grid-area: image;
+	margin: 32px 0 16px 0;
+	grid-column-start: 1;
+	grid-column-end: 5;
 }
 
-.footer {
-  grid-area: footer;
-}
-
-.footer2 {
-  grid-area: footer2;
-}
-
-.about {
-  grid-area: about;
-}
-
-@media screen and (min-width: 1024px) {
-  .grid {
-    max-width: 1200px;
-    padding: 180px 64px 96px 64px;
-    grid-template-columns: repeat(6, 1fr);
-    grid-column-gap: 64px;
-    grid-template-rows: auto 180px 48px auto 96px auto;
-    grid-template-areas:
-      'header header header header info info'
-      '. . . . . .'
-      'palette palette palette palette about about'
-      'image image image image about about'
-      '. . . . . .'
-      'footer2 footer2 . . footer footer';
-  }
+.palette {
+	height: 96px;
+	grid-column-start: 1;
+	grid-column-end: 5;
 }

@@ -1,39 +1,20 @@
-import React, { useState, useEffect } from 'react';
-import * as firebase from 'firebase';
+import React from 'react';
 
 import './App.css';
-import { TitleBar } from '../TitleBar/TitleBar';
-import { useFirestore } from '../../hooks/useFirestore';
-import { Palette } from '../Palette/Palette';
 import { HeroImage } from '../HeroImage/HeroImage';
-import { Footer } from '../Footer/Footer';
+import { Palette } from '../Palette/Palette';
+
+const image = 'https://lukedowding.com/wp-content/uploads/BR2049-Wallpaper-StreetCleaner.png';
 
 function App() {
-  firebase.analytics().logEvent('app_start');
-
-  const { documents } = useFirestore('images');
-  const [image, setImage] = useState('');
-  const date = new Date().toDateString();
-
-  useEffect(() => {
-    if (documents.length > 0) {
-      setImage(documents[0].url);
-    }
-  }, [documents, setImage]);
-
   return (
-    <div className={'grid-container'}>
-      <div className={'grid'}>
-        <h1 className={'header'}>Film and Color</h1>
-        <div className={'info'}>
-          <p>{date}</p>
-          <p>The Grand Budapest Hotel</p>
-          <p>Art direction by Stephan Gellar</p>
-        </div>
-        <Palette className={'palette'} image={image} />
-        <HeroImage className={'image'} imageUrl={image} />
-        <Footer className={'footer'} />
-      </div>
+    <div className={'grid'}>
+      <header>
+        <h1>Film and color</h1>
+        <p>Inspired by <a href={'https://www.instagram.com/filmandcolor/?hl=en'} target="blank">@filmandcolor</a></p>
+      </header>
+      <HeroImage className={'image'} imageUrl={image} />
+      <Palette className={'palette'} image={image} />
     </div>
   );
 }
