@@ -20,7 +20,7 @@ export const HeroImage: React.FC<HeroImageProps> = ({
       src={imageUrl}
       className={`${className} heroImageRoot`}
       style={imageStyles}
-      alt={'Movie still to be analyzed'}
+      alt={'Movie'}
     />
   );
 };

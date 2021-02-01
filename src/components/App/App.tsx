@@ -18,8 +18,10 @@ function App() {
         <h1 className={'title'}>Film and color</h1>
         <p className={'subtitle'}>Inspired by <a href={'https://www.instagram.com/filmandcolor/?hl=en'} target="blank">@filmandcolor</a></p>
       </header>
-      <HeroImage className={'image'} imageUrl={image} />
-      <Palette className={'palette'} image={image} />
+      <div className={'image-wrapper'}>
+        <HeroImage className={'image'} imageUrl={image} />
+      </div>
+        <Palette className={'palette'} image={image} />
       <footer>
         <p>Made by <a href={'https://twitter.com/david_dossett'} target="blank">me</a></p>
       </footer>
