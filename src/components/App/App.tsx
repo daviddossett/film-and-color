@@ -4,7 +4,7 @@ import './App.css';
 import { HeroImage } from '../HeroImage/HeroImage';
 import { Palette } from '../Palette/Palette';
 
-const image = 'https://lukedowding.com/wp-content/uploads/BR2049-Wallpaper-StreetCleaner.png';
+const image = 'https://www.itl.cat/pngfile/big/189-1897904_her-2013.jpg';
 
 function App() {
   return (
