@@ -23,7 +23,7 @@ function App() {
       </div>
         <Palette className={'palette'} image={image} />
       <footer>
-        <p>Made by <a href={'https://twitter.com/david_dossett'} target="blank">me</a></p>
+        <p>Made by <a href={'https://twitter.com/david_dossett'} target="blank">me →</a></p>
       </footer>
     </div>
   );
