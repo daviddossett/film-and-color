@@ -15,7 +15,7 @@ function App() {
           <div className={'circle2'} />
           <div className={'circle3'} />
         </div>
-        <h1 className={'title'}>Film and color</h1>
+        <h1 className={'title'}>filmandcolor</h1>
         <p className={'subtitle'}>Inspired by <a href={'https://www.instagram.com/filmandcolor/?hl=en'} target="blank">@filmandcolor</a></p>
       </header>
       <div className={'image-wrapper'}>

@@ -78,6 +78,13 @@ a {
 	text-decoration: none;
 }
 
+a:hover {
+	background-color: var(--theme);
+	color: var(--background-color);
+	border-radius: 3px;
+	padding: 2px 3px;
+}
+
 #root {
 	height: 100%;
 	width: 100%;
@@ -86,5 +93,6 @@ a {
 :root {
 	--background-color: #f2f2f2;
 	--text-color-primary: #111111;
-	--link-color: #1da1f2;
+	--link-color: rgb(245, 109, 109);
+	--theme: rgb(245, 109, 109);
 }
