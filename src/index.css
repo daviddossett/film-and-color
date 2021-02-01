@@ -76,13 +76,14 @@ li {
 a {
 	color: var(--link-color);
 	text-decoration: none;
+	border-radius: 3px;
+	padding: 2px 3px;
+	margin-left: -2px;
 }
 
 a:hover {
 	background-color: var(--theme);
 	color: var(--background-color);
-	border-radius: 3px;
-	padding: 2px 3px;
 }
 
 #root {
