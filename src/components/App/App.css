@@ -3,12 +3,18 @@ header {
 	grid-column-end: 5;
 }
 
+footer {
+	grid-column-start: 1;
+	grid-column-end: 5;
+	margin-top: 64px;
+}
+
 .grid {
 	display: grid;
 	grid-template-columns: repeat(3, auto);
 	grid-column-gap: 32px;
 	padding-top: 32px;
-	padding-bottom: 128px;
+	padding-bottom: 64px;
 	padding-left: 16px;
 	padding-right: 16px;
 	margin: 0 auto;

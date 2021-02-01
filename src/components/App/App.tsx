@@ -20,6 +20,9 @@ function App() {
       </header>
       <HeroImage className={'image'} imageUrl={image} />
       <Palette className={'palette'} image={image} />
+      <footer>
+        <p>Made by <a href={'https://twitter.com/david_dossett'} target="blank">me</a></p>
+      </footer>
     </div>
   );
 }
