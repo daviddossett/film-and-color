@@ -1,11 +1,45 @@
+header {
+	grid-column-start: 1;
+	grid-column-end: 5;
+}
+
 .grid {
 	display: grid;
 	grid-template-columns: repeat(3, auto);
 	grid-column-gap: 32px;
 	padding-top: 32px;
 	padding-bottom: 128px;
+	padding-left: 16px;
+	padding-right: 16px;
 	margin: 0 auto;
 	max-width: 840px;
+}
+
+.circles {
+	display: flex;
+}
+
+.circle1,
+.circle2,
+.circle3 {
+	height: 24px;
+	width: 24px;
+	border-radius: 50%;
+	margin-bottom: 16px;
+}
+
+.circle1 {
+	background-color: rgb(245, 109, 109);
+}
+
+.circle2 {
+	background-color: rgb(254, 148, 148);
+	margin-left: -10px;
+}
+
+.circle3 {
+	background-color: rgb(109, 125, 245);
+	margin-left: -12px;
 }
 
 .image {

@@ -10,8 +10,13 @@ function App() {
   return (
     <div className={'grid'}>
       <header>
-        <h1>Film and color</h1>
-        <p>Inspired by <a href={'https://www.instagram.com/filmandcolor/?hl=en'} target="blank">@filmandcolor</a></p>
+        <div className={'circles'}>
+          <div className={'circle1'} />
+          <div className={'circle2'} />
+          <div className={'circle3'} />
+        </div>
+        <h1 className={'title'}>Film and color</h1>
+        <p className={'subtitle'}>Inspired by <a href={'https://www.instagram.com/filmandcolor/?hl=en'} target="blank">@filmandcolor</a></p>
       </header>
       <HeroImage className={'image'} imageUrl={image} />
       <Palette className={'palette'} image={image} />
