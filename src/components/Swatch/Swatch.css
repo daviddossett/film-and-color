@@ -1,6 +1,9 @@
 .swatchWrapper {
 	overflow: hidden;
 	animation: fadeIn 0.2s;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
 .loadingSwatch {
@@ -9,7 +12,30 @@
 	animation: fadeIn 0.2s;
 }
 
-@keyframes fadeIn {
+.hex-wrapper {
+	height: 100%;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	opacity: 0;
+}
+
+.hex-wrapper:hover {
+	opacity: 100;
+}
+
+.hex {
+	color: #fff;
+	font-size: 0.875em;
+	background-color: rgba(1, 1, 1, 0.5);
+	padding: 2px 6px;
+	border-radius: 4px;
+	color: #fff;
+	text-transform: uppercase;
+}
+
+.swatchWrapper @keyframes fadeIn {
 	from {
 		opacity: 0;
 	}

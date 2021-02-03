@@ -14,5 +14,9 @@ export const Swatch: React.FC<SwatchProps> = ({ color, isLoading }) => {
 
   if (isLoading) return <div className={'loadingSwatch'} />;
 
-  return <div style={style} className={'swatchWrapper'} />;
+  return <div style={style} className={'swatchWrapper'}>
+    <div className={'hex-wrapper'}>
+      <p className={'hex'}>{color}</p>
+    </div>
+  </div>;
 };
