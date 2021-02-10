@@ -4,9 +4,17 @@ import './App.css';
 import { HeroImage } from '../HeroImage/HeroImage';
 import { Palette } from '../Palette/Palette';
 
+declare global {
+  interface Window { analytics: any; }
+}
+
 const image = 'https://www.itl.cat/pngfile/big/189-1897904_her-2013.jpg';
 
 function App() {
+  window.analytics.track("User Registered", {
+    plan: "Pro Annual",
+    accountType: "Facebook"
+  });
   return (
     <div className={'grid'}>
       <header>
